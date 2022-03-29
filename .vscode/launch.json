@@ -1,0 +1,90 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch baekjoon2884",
+      "request": "launch",
+      "mainClass": "baekjoon2884",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon14681",
+      "request": "launch",
+      "mainClass": "baekjoon14681",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon9498",
+      "request": "launch",
+      "mainClass": "baekjoon9498",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon2588",
+      "request": "launch",
+      "mainClass": "baekjoon2588",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon10430",
+      "request": "launch",
+      "mainClass": "baekjoon10430",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon18108",
+      "request": "launch",
+      "mainClass": "baekjoon18108",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon10926",
+      "request": "launch",
+      "mainClass": "baekjoon10926",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon1000",
+      "request": "launch",
+      "mainClass": "baekjoon1000",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon10172",
+      "request": "launch",
+      "mainClass": "baekjoon10172",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "type": "java",
+      "name": "Launch baekjoon10171",
+      "request": "launch",
+      "mainClass": "baekjoon10171",
+      "projectName": "baekjoon_4367bde5"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": true,
+      "cwd": "/Users/leeminhyeong/git/baekjoon",
+      "environment": [],
+      "program": "/Users/leeminhyeong/git/baekjoon/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "lldb",
+      "externalConsole": true
+    }
+  ]
+}
