@@ -22,7 +22,7 @@ bool union_tree(int p, int q){
 
 int main(){
     ios_base::sync_with_stdio(0);
-    cin.tie(0);π
+    cin.tie(0);
     cin >> v >> e;
     for(int i=0; i<e; i++){
         int a, b, c; cin >> a >> b >> c;
