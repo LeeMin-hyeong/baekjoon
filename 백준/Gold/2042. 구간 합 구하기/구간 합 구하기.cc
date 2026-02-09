@@ -41,6 +41,8 @@ void init(vector<long long> &arr, vector<long long> &tree, long long node, long 
 }
 
 int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     long long n, m, k;
     cin >> n >> m >> k;
     vector<long long> arr(n+1);
