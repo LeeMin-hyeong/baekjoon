@@ -103,18 +103,18 @@ int main(){
     for(int i=1; i<cnt; i++){
         parent[i] = i;
     }
+    int edge_cnt = 0;
     while(!pq.empty()){
         int w = -pq.top().first;
         int p = pq.top().second.first;
         int q = pq.top().second.second;
         pq.pop();
-        if(union_find(p, q)) ans += w;
+        if(union_find(p, q)){
+            ans += w;
+            edge_cnt++;
+        }
     }
-    int alone = 0;
-    for(int i=1; i<cnt; i++){
-        if(parent[i] == i) alone++;
-    }
-    if(alone > 1){
+    if(edge_cnt != cnt-2){
         cout << -1 << '\n';
     }
     else{
