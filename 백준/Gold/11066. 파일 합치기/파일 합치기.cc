@@ -6,6 +6,8 @@ long long dp[501][501];
 int sum[501];
 
 int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     cin >> tc;
     while(tc--){
         int k; cin >> k;
