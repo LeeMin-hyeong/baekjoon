@@ -1,5 +1,8 @@
 #include <iostream>
+#include <unordered_map>
 #include <vector>
+#include <cstring>
+#include <algorithm>
 #include <queue>
 #include <tuple>
 using namespace std;
@@ -25,6 +28,8 @@ bool union_find(int p, int q){
 }
 
 int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     cin >> n;
     for(int i=1; i<=n; i++){
         int w; cin >> w;
