@@ -54,3 +54,4 @@ dkms.conf
 *.vscode/
 tc.txt
 a.cpp
+.DS_Store
