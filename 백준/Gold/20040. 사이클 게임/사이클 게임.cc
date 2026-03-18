@@ -15,7 +15,7 @@ bool union_find(int a, int b){
     int pa = find(a);
     int pb = find(b);
     if(pa == pb) return false;
-    if(pa < pb) parent[pb] = pa;
+    if(pa > pb) parent[pb] = pa;
     else parent[pa] = pb;
     return true;
 }
