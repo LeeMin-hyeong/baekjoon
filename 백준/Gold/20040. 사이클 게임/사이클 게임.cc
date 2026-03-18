@@ -30,10 +30,8 @@ int main(){
     int ans = 0;
     for(int i=1; i<=m; i++){
         int a, b; cin >> a >> b;
-        if(!union_find(a, b)){
-            if(ans == 0){
-                ans = i;
-            }
+        if(ans == 0 && !union_find(a, b)){
+            ans = i;
         }
     }
     cout << ans << '\n';
