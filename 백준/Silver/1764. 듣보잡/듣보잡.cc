@@ -1,5 +1,4 @@
 #include <iostream>
-#include <deque>
 #include <cstring>
 #include <set>
 #include <algorithm>
@@ -7,7 +6,8 @@
 using namespace std;
 
 int n, m;
-set<string> a, b;
+set<string> a;
+vector<string> ans;
 
 int main(){
     ios_base::sync_with_stdio(0);
@@ -19,12 +19,13 @@ int main(){
     }
     for(int i=0; i<m; i++){
         string s; cin >> s;
-        b.insert(s);
+        if(a.count(s)){
+            ans.push_back(s);
+        }
     }
-    vector<string> c;
-    set_intersection(a.begin(), a.end(), b.begin(), b.end(), back_inserter(c));
-    cout << c.size() << '\n';
-    for(auto i=c.begin(); i != c.end(); i++){
-        cout << *i << '\n';
+    sort(ans.begin(), ans.end());
+    cout << ans.size() << '\n';
+    for(auto i=0; i<ans.size(); i++){
+        cout << ans[i] << '\n';
     }
 }
