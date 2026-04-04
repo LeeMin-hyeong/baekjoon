@@ -3,7 +3,6 @@
 using namespace std;
 
 bool prime[250000];
-int ans[250000];
 
 int main(){
     ios_base::sync_with_stdio(0);
@@ -18,7 +17,6 @@ int main(){
             }
         }
     }
-    // for(int i=1; i<123457;)
     while(true){
         int n; cin >> n;
         if(n == 0) break;
