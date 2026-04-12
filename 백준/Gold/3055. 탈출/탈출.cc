@@ -6,7 +6,7 @@ int r, c, cnt;
 int dy[] = {-1, 0, 1, 0};
 int dx[] = {0, 1, 0, -1};
 char forest[50][50];
-int memo[50][50];
+bool visited[50][50];
 pair<int, int> d;
 queue<pair<int, int>> water, hedgehog;
 
@@ -21,10 +21,9 @@ void hedgehog_move(){
             int nx = x+dx[i];
             if(ny < 0 || ny >= r || nx < 0 || nx >= c) continue;
             if(forest[ny][nx] == 'X') continue;
-            if(memo[ny][nx] == -2) continue;
-            if(memo[ny][nx] >= 0) continue;
+            if(visited[ny][nx]) continue;
             hedgehog.push({ny, nx});
-            memo[ny][nx] = cnt+1;
+            visited[ny][nx] = true;
         }
     }
     cnt++;
@@ -42,9 +41,9 @@ void water_move(){
             if(ny < 0 || ny >= r || nx < 0 || nx >= c) continue;
             if(forest[ny][nx] == 'X') continue;
             if(forest[ny][nx] == 'D') continue;
-            if(memo[ny][nx] == -2) continue;
+            if(visited[ny][nx]) continue;
             water.push({ny, nx});
-            memo[ny][nx] = memo[y][x];
+            visited[ny][nx] = true;
         }
     }
 }
@@ -55,34 +54,29 @@ int main(){
     cin >> r >> c;
     for(int i=0; i<r; i++){
         for(int j=0; j<c; j++){
-            memo[i][j] = -1;
-        }
-    }
-    for(int i=0; i<r; i++){
-        for(int j=0; j<c; j++){
             cin >> forest[i][j];
             if(forest[i][j] == 'S'){
                 hedgehog.push({i, j});
-                memo[i][j] = 0;
+                visited[i][j] = true;
             }
             else if(forest[i][j] == 'D'){
                 d = {i, j};
             }
             else if(forest[i][j] == '*'){
                 water.push({i, j});
-                memo[i][j] = -2;
+                visited[i][j] = true;
             }
         }
     }
     while(!hedgehog.empty()){
         water_move();
         hedgehog_move();
-        if(memo[d.first][d.second] > 0) break;
+        if(visited[d.first][d.second]) break;
     }
-    if(memo[d.first][d.second] == -1){
+    if(!visited[d.first][d.second]){
         cout << "KAKTUS\n";
     }
     else{
-        cout << memo[d.first][d.second] << '\n';
+        cout << cnt << '\n';
     }
 }
