@@ -7,7 +7,7 @@ using namespace std;
 long long solution(vector<vector<int>> land, int P, int Q) {
     long long ans = 1000000000LL * 100 * 300 * 300;
     int n = land.size();
-    int target;
+
     vector<long long> v;
 
     for(int i=0; i<n; i++){
