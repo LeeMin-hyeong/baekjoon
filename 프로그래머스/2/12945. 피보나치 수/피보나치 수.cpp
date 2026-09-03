@@ -3,15 +3,12 @@
 
 using namespace std;
 
-int dp[100'001];
-
 int solution(int n) {
-    dp[1] = 1;
+    int dp1 = 0, dp2 = 1;
     for(int i=2; i<=n; i++){
-        int pp = dp[0], p = dp[1];
-        int np = (pp+p)%1234567;
-        dp[0] = p;
-        dp[1] = np;
+        int np = (dp1+dp2)%1234567;
+        dp1 = dp2;
+        dp2 = np;
     }
-    return dp[1];
+    return dp2;
 }
